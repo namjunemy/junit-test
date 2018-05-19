@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class CalculatorTest {
   Calculator calculator = new Calculator();
@@ -25,5 +26,15 @@ public class CalculatorTest {
     int result = calculator.sub(6, 2);
 
     assertEquals(result, 4);
+  }
+
+  @Test
+  public void testMul() {
+    int result = calculator.mul(7, 5);
+    boolean flag = false;
+    if (result == 35)
+      flag = true;
+
+    assertTrue("Multiply method return true", flag);
   }
 }
