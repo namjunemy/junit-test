@@ -2,10 +2,16 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 public class CalculatorTest {
   Calculator calculator = new Calculator();
+
+  @Test
+  public void notNull() {
+    assertNotNull(calculator);
+  }
 
   @Test
   public void testAdd() {
