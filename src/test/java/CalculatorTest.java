@@ -16,21 +16,21 @@ public class CalculatorTest {
 
   @Test
   public void testAdd() {
-    int sum = calculator.add(1, 3);
+    double sum = calculator.add(1, 3);
 
-    assertThat(sum, is(4));
+    assertThat(sum, is(4.0));
   }
 
   @Test
   public void testSub() {
-    int result = calculator.sub(6, 2);
+    double result = calculator.sub(6, 2);
 
-    assertEquals(result, 4);
+    assertEquals((int) result, (int) 4.0);
   }
 
   @Test
   public void testMul() {
-    int result = calculator.mul(7, 5);
+    double result = calculator.mul(7, 5);
     boolean flag = false;
     if (result == 35)
       flag = true;
